@@ -76,6 +76,13 @@ unset path_file
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  $HOME/.gem/ruby/1.8/bin
+  /Applications/matlab7.14/bin
+  /Applications/Octave.app/Contents/Resources/bin
+  /Library/Frameworks/EPD64.framework/Versions/Current/bin # enghtought python
+  $HOME/Library/Haskell/bin
+  /usr/texbin
+  /opt/scripts
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
