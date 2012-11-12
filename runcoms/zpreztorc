@@ -26,6 +26,7 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
+  'git' \
   'editor' \
   'history' \
   'directory' \
@@ -35,6 +36,9 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'git' \
   'rsync' \
+  'pacman' \
+  'haskell' \
+  'archive' \
   'prompt'
 
 #
@@ -45,14 +49,14 @@ zstyle ':prezto:load' pmodule \
 zstyle ':prezto:module:editor' keymap 'vi'
 
 # Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 #
 # Git
 #
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
+zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
 #
 # GNU Utility
@@ -66,7 +70,7 @@ zstyle ':prezto:module:editor' keymap 'vi'
 #
 
 # Set the Pacman frontend.
-# zstyle ':prezto:module:pacman' frontend 'yaourt'
+zstyle ':prezto:module:pacman' frontend 'pacmatic'
 
 #
 # Prompt
@@ -76,7 +80,7 @@ zstyle ':prezto:module:editor' keymap 'vi'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'sorin'
-
+ 
 #
 # Screen
 #

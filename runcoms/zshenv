@@ -11,6 +11,9 @@
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
+else
+  export BROWSER=`which firefox`
+  export USERWM=`which xmonad`
 fi
 
 #
@@ -76,6 +79,11 @@ unset path_file
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /home/mcdon/.gem/ruby/1.9.1/bin  # ruby local path
+  /home/mcdon/perl5/bin # perl local path
+  /usr/local/admb/bin   # admb
+  /opt/matlab/bin       # matlab
+  /usr/lib/rstudio/bin  # rstudio
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
@@ -97,4 +105,24 @@ if [[ -d "$TMPDIR" ]]; then
     mkdir -p "$TMPPREFIX"
   fi
 fi
+
+#
+# Environmental variables
+# 
+
+# Cabal
+export ARCH_HASKELL='John McDonnell <john.v.mcdonnell@gmail.com>'
+
+# ADMB
+export ADMB_HOME=/usr/local/admb/
+
+# Perl
+export PERL_LOCAL_LIB_ROOT="/home/mcdon/perl5"
+export PERL_MB_OPT="--install_base /home/mcdon/perl5"
+export PERL_MM_OPT="INSTALL_BASE=/home/mcdon/perl5"
+export PERL5LIB="/home/mcdon/perl5/lib/perl5/x86_64-linux-thread-multi:/home/mcdon/perl5/lib/perl5"
+
+# Matlab
+export AWT_TOOLKIT=MToolkit
+export MATLAB_JAVA=/usr/lib/jvm/java-7-openjdk/jre
 
