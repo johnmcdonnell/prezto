@@ -126,3 +126,8 @@ export PERL5LIB="/home/mcdon/perl5/lib/perl5/x86_64-linux-thread-multi:/home/mcd
 export AWT_TOOLKIT=MToolkit
 export MATLAB_JAVA=/usr/lib/jvm/java-7-openjdk/jre
 
+# Functions
+
+chromeapp () {
+    google-chrome --app="http://$1"
+}
