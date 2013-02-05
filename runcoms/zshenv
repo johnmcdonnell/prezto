@@ -11,6 +11,9 @@
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
+else
+  export BROWSER=`which firefox`
+  export USERWM=`which xmonad`
 fi
 
 #
@@ -105,7 +108,14 @@ if [[ -d "$TMPDIR" ]]; then
   fi
 fi
 
+# Functions
 say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*}; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /dev/null ; }
 
-
+# Aliases
 alias skim="open -a skim"
+
+# Environmental variables
+
+# Cabal
+export ARCH_HASKELL='John McDonnell <john.v.mcdonnell@gmail.com>'
+
