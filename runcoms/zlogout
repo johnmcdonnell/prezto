@@ -5,11 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #   John McDonnell <john.v.mcdonnell@gmail.com>
 
-if [ -f ~/.signoffs ];
-then
-    SIGNOFF=`shuf -n 1 ~/.signoffs`
-else
-    SIGNOFF='Till next time!'
-fi
+SIGNOFF='Till next time!'
 cowsay -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) $SIGNOFF || echo $SIGNOFF
 

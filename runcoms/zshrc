@@ -10,6 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Powerline prompt
+#. /Users/mcdon/.vim/plugin/powerline/powerline/bindings/bash/powerline.sh
+
 # fasd
 eval "$(fasd --init auto)"
 alias v='f -e vim -b viminfo'
