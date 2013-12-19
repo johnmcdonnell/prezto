@@ -79,9 +79,10 @@ unset path_file
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $HOME/.gem/ruby/1.8/bin
+  /usr/local/opt/ruby/bin
   /Applications/matlab7.14/bin
   /Applications/Octave.app/Contents/Resources/bin
+  /usr/local/share/npm/bin 
   /Library/Frameworks/EPD64.framework/Versions/Current/bin # enghtought python
   $HOME/Library/Haskell/bin
   /usr/texbin
@@ -113,9 +114,15 @@ say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1
 
 # Aliases
 alias skim="open -a skim"
+alias shuf=gshuf
 
 # Environmental variables
 
 # Cabal
 export ARCH_HASKELL='John McDonnell <john.v.mcdonnell@gmail.com>'
 
+# Rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+
+# Android
+export ANDROID_HOME=/usr/local/opt/android-sdk
